@@ -1,0 +1,25 @@
+﻿<Window x:Class="ExampleApplicationWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="375" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="158"></RowDefinition>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Click="OpenExtension" Height="20" VerticalAlignment="Top" Content="Plugin Manager"/>
+            <ListBox Grid.Row="1" x:Name="ColorList"></ListBox>
+            <ListBox Grid.Row="2" x:Name="ShapeList"></ListBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Canvas x:Name="Canvas">
+            </Canvas>
+        </Grid>
+    </Grid>
+</Window>
